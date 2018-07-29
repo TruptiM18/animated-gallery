@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: antiquewhite;
+}
+#container{
+    flex-wrap: wrap;
+    width: 75%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 20px;
+}
+.img-div {
+    position: relative;
+    max-width: 310px;
+    max-height: 210px;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  
+    margin: 10px;
+}
+img {
+    height: 210px;
+    max-width: 100%;  
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;    
+}  
+.color-grey {
+    background-color: grey; 
+}
+.color-teal {
+    background-color:teal; 
+}
+.color-red {
+    background-color: crimson; 
+}
+.btn {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    outline: none;
+    border: 1.1px solid rgb(0, 140, 255);
+    color: rgb(0, 140, 255);
+    padding: 10px;
+    background: rgba(245, 245, 245, 0.897);
+    letter-spacing: 1px;
+    border-radius: 6px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;  
+}
+.btn a {
+    text-decoration: none;
+}
+
+.img-div:hover img {
+    opacity: 0.5;  
+}
+.img-div:hover button {
+    opacity: 1;
+}
+@media only screen and (min-width:768px) {
+    #container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 75%;
+    }
+}
